@@ -11,7 +11,7 @@ def insert_Data(data:schema.PostValidate=Body(...,description="inserting data"))
             return {"RESPONSE":HTTPException(status_code=status.HTTP_200_OK)}
         else:
               return{"RESPONSE":HTTPException(status_code=status.HTTP_400_BAD_REQUEST)}
-        
+      
 @router.get('/readdata')
 def read_Data():
         return {"Response":db.read_Data(),
@@ -29,4 +29,8 @@ def update_Details(data:schema.UpdateFinder=Body(...)):
 @router.delete("/deletedetails")
 def deleteDetails(data:schema.UpdateFinder=Body(...)):
       return db.delete_Details(data)
-          
+
+@router.get('/query')
+def queryparams(query:int=0):
+      return {"RESPONSE":"NONE",
+              "QUERY":query}
