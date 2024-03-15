@@ -6,3 +6,11 @@ class PostValidate(BaseModel):
 
 class UpdateFinder(BaseModel):
     name:str=Field(...)
+
+class BasicTemplate(BaseModel):
+    updates:str
+    sequence:int
+    count:int
+    merge:bool
+        
+
