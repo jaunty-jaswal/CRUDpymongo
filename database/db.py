@@ -1,6 +1,6 @@
 import pymongo
 from bson.objectid import ObjectId
-client = pymongo.MongoClient("mongodb+srv://jaunty:9410993055@mydb.drbzqzi.mongodb.net/")
+client = pymongo.MongoClient("mongo-client")
 
 db = client["mongo_data_new"] #dbase name
 #collection
