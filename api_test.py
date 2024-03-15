@@ -37,3 +37,8 @@ def tryDelete(name):
 
 if __name__ == "__main__":
     tryDelete(name="name 4")
+    insertRequest()
+    queryParam()
+    showData()    
+
+
